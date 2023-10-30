@@ -12,11 +12,11 @@ public static class InputManager
 
         _controls.Game.Movement.performed += ctx => 
         {
-            myPlayer.SetMovementDirection(ctx.ReadValue<Vector3>());
+            myPlayer.SetMovementDirection(ctx.ReadValue<Vector2>());
         
         };
 
-        _controls.Game.Jump.started += ctx =>
+        _controls.Game.Jump.performed += ctx =>
         {
             myPlayer.Jump();
         };
