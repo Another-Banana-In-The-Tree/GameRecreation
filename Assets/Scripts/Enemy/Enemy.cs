@@ -15,8 +15,10 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected Transform[] wayPoints;
     [SerializeField] protected float waitTime;
     [SerializeField] protected bool patrolling = true;
+    [SerializeField]protected Camera cam;
+    //[SerializeField] protected float sightRange;
 
-    protected GameObject player;
+    //protected GameObject player;
     /*void Start()
     {
         Init();
@@ -27,7 +29,7 @@ public abstract class Enemy : MonoBehaviour
     {
        // Debug.Log("targetSet");
         target = wayPoints[0].position;
-        player = GameObject.Find("Player");
+        
     }
 
     // Update is called once per  voidframe
@@ -56,22 +58,6 @@ public abstract class Enemy : MonoBehaviour
 
     
     public virtual void Movement()
-    {
-        if (patrolling)
-        {
-            Patrolling();
-        }
-        else
-        {
-            LinearPath();
-        }
-    }
-
-    public virtual void StopPatrolling()
-    {
-        patrolling = !patrolling;
-    }
-    public virtual void Patrolling()
     {
         if (!settingTarget)
         {
@@ -105,9 +91,12 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
-    public virtual void LinearPath()
+    public virtual void Spawned(Transform[] wayPointSet) 
     {
-
+        wayPoints = wayPointSet;
     }
+   
+
+  
     
 }

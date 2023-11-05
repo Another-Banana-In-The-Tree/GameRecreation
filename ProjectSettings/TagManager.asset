@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - PlayerFoot
   - WeakPoint
+  - Coconut
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
+  - Coconut
+  - Enemy
   - 
   - 
   - 
