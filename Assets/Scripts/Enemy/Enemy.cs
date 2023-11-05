@@ -22,7 +22,7 @@ public abstract class Enemy : MonoBehaviour
 
     public virtual void Init()
     {
-        Debug.Log("targetSet");
+       // Debug.Log("targetSet");
         target = wayPoints[0].position;
     }
 
@@ -32,10 +32,10 @@ public abstract class Enemy : MonoBehaviour
 
     public virtual IEnumerator SetTarget(Vector3 position)
     {
-        Debug.Log("set target wait");
+       // Debug.Log("set target wait");
         settingTarget = true;
         yield return new WaitForSeconds(waitTime);
-        Debug.Log("ended wait");
+       // Debug.Log("ended wait");
         settingTarget = false;
         target = position;
         FaceTowards(position - transform.position);
@@ -62,19 +62,19 @@ public abstract class Enemy : MonoBehaviour
             }
             else
             {
-                Debug.Log("Reached Target");
+                //Debug.Log("Reached Target");
                 if (target == wayPoints[0].position)
                 {
                     if (flipped)
                     {
-                        Debug.Log("hit left waypoint");
+                        //Debug.Log("hit left waypoint");
                         flipped = !flipped;
                         StartCoroutine("SetTarget", wayPoints[1].position);
                     }
                 }
                 else if (!flipped)
                 {
-                    Debug.Log("Hit right waypoint");
+                    //Debug.Log("Hit right waypoint");
                     flipped = !flipped;
                     StartCoroutine("SetTarget", wayPoints[0].position);
                 }
@@ -82,4 +82,5 @@ public abstract class Enemy : MonoBehaviour
             }
         }
     }
+    
 }

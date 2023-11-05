@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - PlayerFoot
+  - WeakPoint
   layers:
   - Default
   - TransparentFX
