@@ -36,10 +36,12 @@ public class Player : MonoBehaviour
     {
         InputManager.Init(this);
         sprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
+        animator.playbackTime = Time.deltaTime;
         transform.position += transform.rotation * (speed * Time.deltaTime * _moveDir);
         CheckGround();
         _rb = GetComponent<Rigidbody2D>();
