@@ -46,24 +46,26 @@ public class Player : MonoBehaviour
         CheckGround();
         _rb = GetComponent<Rigidbody2D>();
         _depth = GetComponent<BoxCollider2D>().bounds.size.y;
+    }
 
-
+    public void FixedUpdate()
+    {
         //_-_-_-_-_-JANK ANIMATION MATH :)-_-_-_-_-_
         Movement = speed * Time.deltaTime * _moveDir;
         float Movef = (float)Movement.x;
         animator.SetFloat("Speed", Mathf.Abs(Movef));
 
-        if (Movement.x > 0) 
+        if (Movement.x > 0)
         {
             sprite.flipX = false;
         }
 
-        else if (Movement.x < 0) 
+        else if (Movement.x < 0)
         {
             sprite.flipX = true;
         }
 
-        if (_isGrounded == true)  
+        if (_isGrounded == true)
         {
             animator.SetBool("IsJumping", false);
         }
@@ -72,9 +74,7 @@ public class Player : MonoBehaviour
             animator.SetBool("IsJumping", true);
         }
         //_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
     }
-    
     public void SetMovementDirection(Vector2 newDirection)
     {
         _moveDir = newDirection;
