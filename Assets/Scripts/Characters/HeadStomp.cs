@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class HeadStomp : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.name);
-        if(collision.gameObject.tag == "WeakPoint")
+        if (collision.gameObject.tag == "PlayerFoot")
         {
-            Destroy(collision.gameObject);
+            Destroy(gameObject.transform.root.gameObject);
         }
     }
 }
