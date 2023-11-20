@@ -18,7 +18,9 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private Vector2 Movement; //checks movement for animations
     SpriteRenderer sprite;
-    
+
+    private float _currentVelocity= 0;
+
     //Vars for checking grounded
     private bool _isGrounded;
     private Rigidbody2D _rb;
@@ -42,7 +44,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         animator.playbackTime = Time.deltaTime;
-        transform.position += transform.rotation * (speed * Time.deltaTime * _moveDir);
+        transform.position += transform.rotation * (_currentVelocity * Time.deltaTime * _moveDir);
         CheckGround();
         _rb = GetComponent<Rigidbody2D>();
         _depth = GetComponent<BoxCollider2D>().bounds.size.y;
@@ -50,8 +52,17 @@ public class Player : MonoBehaviour
 
     public void FixedUpdate()
     {
-        //_-_-_-_-_-JANK ANIMATION MATH :)-_-_-_-_-_
+
         Movement = speed * Time.deltaTime * _moveDir;
+        if (_currentVelocity < speed && Movement.x != 0)
+        {
+            _currentVelocity += 0.4f;
+        }
+        if (_currentVelocity > 0 && Movement.x == 0)
+        {
+            _currentVelocity -= 0.4f;
+        }
+        //_-_-_-_-_-JANK ANIMATION MATH :)-_-_-_-_-_
         float Movef = (float)Movement.x;
         animator.SetFloat("Speed", Mathf.Abs(Movef));
 
