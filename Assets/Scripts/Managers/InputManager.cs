@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public static class InputManager
 {
     private static Controls _controls;
-
+    private static float jumpTimer = 0;
     public static void Init(Player myPlayer)
     {
         _controls = new Controls();
@@ -16,9 +17,19 @@ public static class InputManager
         
         };
 
-        _controls.Game.Jump.performed += ctx =>
+        _controls.Jumping.Jump.performed += ctx =>
         {
-            myPlayer.Jump();
+            /**
+                jumpTimer += Time.deltaTime;
+                if (jumpTimer > 1) jumpTimer = 1;
+                Debug.Log("Jump Power is at " + jumpTimer);
+            
+            if (_controls.Jumping.Jump.WasReleasedThisFrame())
+            {
+            **/
+                myPlayer.Jump(/**jumpTimer**/1);
+            //}
+            
         };
 
         _controls.Enable();

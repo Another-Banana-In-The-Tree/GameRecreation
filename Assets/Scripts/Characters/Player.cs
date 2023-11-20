@@ -1,17 +1,27 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    //_-_-_-ANIMATION-_-_-_
+    public Animator animator;
+    //_-_-_-_-_-_-_-_-_-_-_
+
+
     //Vars for speed and jumping
     [Header("Movement and Jumping Force")]
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private Vector2 Movement; //checks movement for animations
+    SpriteRenderer sprite;
     
-    
-    private float currentVelocity = 0;
+    //Vars
+    private float _currentVelocity = 0;
+    [SerializeField ]private float jumpTime;
     
     //Vars for checking grounded
     private bool _isGrounded;
@@ -29,40 +39,31 @@ public class Player : MonoBehaviour
     private void Start()
     {
         InputManager.Init(this);
+        sprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-<<<<<<< Updated upstream
-        transform.position += transform.rotation * (speed * Time.deltaTime * _moveDir);
-=======
         animator.playbackTime = Time.deltaTime;
-        
-        transform.position += transform.rotation * (currentVelocity  * Time.deltaTime * _moveDir);
->>>>>>> Stashed changes
+        transform.position += transform.rotation * (_currentVelocity * Time.deltaTime * _moveDir);
         CheckGround();
-        
         _rb = GetComponent<Rigidbody2D>();
         _depth = GetComponent<BoxCollider2D>().bounds.size.y;
     }
-<<<<<<< Updated upstream
-    
-=======
 
     public void FixedUpdate()
     {
         Movement = speed * Time.deltaTime * _moveDir;
-        if (currentVelocity <= speed && Movement.x > 0)
+        if (_currentVelocity < speed && Movement.x != 0 )
         {
-            currentVelocity+= 0.1f;
-            Debug.Log("current speed at " + currentVelocity);
+            _currentVelocity += 0.4f;
         }
-        else
+        if (_currentVelocity > 0 && Movement.x == 0 )
         {
-            currentVelocity = 0;
+            _currentVelocity -= 0.4f;
         }
         //_-_-_-_-_-JANK ANIMATION MATH :)-_-_-_-_-_
-        
         float Movef = (float)Movement.x;
         animator.SetFloat("Speed", Mathf.Abs(Movef));
 
@@ -86,19 +87,20 @@ public class Player : MonoBehaviour
         }
         //_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
     }
->>>>>>> Stashed changes
     public void SetMovementDirection(Vector2 newDirection)
     {
         _moveDir = newDirection;
     }
     
-    public void Jump() {
+    public void Jump(float JumpHeld) {
         
         if(_isGrounded)
         {
             Debug.Log("Jump called");
-            _rb.velocity = new Vector2(_rb.velocity.x, jumpForce);
+            
+            _rb.velocity = new Vector2(_rb.velocity.x, (jumpForce*JumpHeld + 1));
         }
+
     }
     
     private void CheckGround()
