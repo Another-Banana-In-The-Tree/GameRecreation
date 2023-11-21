@@ -1581,6 +1581,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4223878130434815867, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.022472408
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223878130434815867, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.022472408
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223878130434815867, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9528302
+      objectReference: {fileID: 0}
     - target: {fileID: 5753641767863676484, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
       propertyPath: speed
       value: 4
@@ -6118,6 +6130,18 @@ PrefabInstance:
     - target: {fileID: 1793105761902838372, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223878130434815867, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8867924
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223878130434815867, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.071110725
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223878130434815867, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.10975731
       objectReference: {fileID: 0}
     - target: {fileID: 5753641767863676484, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
       propertyPath: speed

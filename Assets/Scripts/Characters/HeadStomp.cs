@@ -6,10 +6,14 @@ public class HeadStomp : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
+        
         if (collision.gameObject.tag == "PlayerFoot")
         {
-            Destroy(gameObject.transform.root.gameObject);
+           Enemy enemy = transform.root.gameObject.GetComponent<Enemy>();
+            if(enemy != null)
+            {
+                enemy.Die();
+            }
         }
     }
 }

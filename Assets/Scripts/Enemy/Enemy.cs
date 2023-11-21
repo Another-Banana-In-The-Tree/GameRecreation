@@ -96,7 +96,11 @@ public abstract class Enemy : MonoBehaviour
         wayPoints = wayPointSet;
     }
    
-
+    public virtual void Die()
+    {
+        Debug.Log("whaaa");
+        Destroy(gameObject);
+    }
   
     
 }
