@@ -9,10 +9,22 @@ public class HeadStomp : MonoBehaviour
         
         if (collision.gameObject.tag == "PlayerFoot")
         {
-           Enemy enemy = transform.root.gameObject.GetComponent<Enemy>();
-            if(enemy != null)
+            if (gameObject.tag == "WeakPoint")
             {
-                enemy.Die();
+                Enemy enemy = transform.root.gameObject.GetComponent<Enemy>();
+                if (enemy != null)
+                {
+                    enemy.Die();
+                }
+            }
+            if(gameObject.tag == "Barrel")
+            {
+
+                Barrel  barrel = transform.root.gameObject.GetComponent<Barrel>();
+                if (barrel != null)
+                {
+                    barrel.Stomped();
+                }
             }
         }
     }
