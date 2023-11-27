@@ -15,7 +15,11 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected Transform[] wayPoints;
     [SerializeField] protected float waitTime;
     [SerializeField] protected bool patrolling = true;
-    [SerializeField]protected Camera cam;
+
+   // private Rigidbody2D rb;
+
+    private WaitForSeconds waitCooldown;
+    // [SerializeField]protected Camera cam;
     //[SerializeField] protected float sightRange;
 
     //protected GameObject player;
@@ -25,9 +29,13 @@ public abstract class Enemy : MonoBehaviour
         Debug.Log("test");
     }*/
 
+   
+
     public virtual void Init()
     {
-       // Debug.Log("targetSet");
+        // Debug.Log("targetSet");
+
+        waitCooldown = new WaitForSeconds(waitTime);
         target = wayPoints[0].position;
         
     }
@@ -40,16 +48,16 @@ public abstract class Enemy : MonoBehaviour
     {
        // Debug.Log("set target wait");
         settingTarget = true;
-        yield return new WaitForSeconds(waitTime);
+        yield return waitCooldown;
        // Debug.Log("ended wait");
         settingTarget = false;
         target = position;
-        FaceTowards(position - transform.position);
+        FaceTowards();
     }
 
-    public virtual void FaceTowards(Vector3 direction)
+    public virtual void FaceTowards()
     {
-        if (direction.x > 0f)
+        if (flipped)
         {
             transform.localEulerAngles = new Vector3(0, 180, 0);
         }else transform.localEulerAngles = new Vector3(0, 0, 0);
@@ -61,16 +69,21 @@ public abstract class Enemy : MonoBehaviour
     {
         if (!settingTarget)
         {
-            velocity = ((transform.position - previousPosition) / Time.deltaTime);
+
+            
+
             previousPosition = transform.position;
 
             if (transform.position.x != target.x)
             {
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.x, transform.position.y, transform.position.z), speed * Time.deltaTime);
+
+               
             }
+            
             else
             {
-                //Debug.Log("Reached Target");
+                
                 if (target == wayPoints[0].position)
                 {
                     if (flipped)

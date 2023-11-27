@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HeadStomp : MonoBehaviour
 {
+
+    private Rigidbody2D player;
+    private Vector2 bounceForce = new Vector2(0, 15);
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
@@ -26,6 +29,9 @@ public class HeadStomp : MonoBehaviour
                     barrel.Stomped();
                 }
             }
+            player = collision.gameObject.transform.root.gameObject.GetComponent<Rigidbody2D>();
+
+            player.AddForce(bounceForce, ForceMode2D.Impulse);
         }
     }
 }
