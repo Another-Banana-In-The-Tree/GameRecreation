@@ -9,6 +9,7 @@ TagManager:
   - PlayerFoot
   - WeakPoint
   - Coconut
+  - Barrel
   layers:
   - Default
   - TransparentFX

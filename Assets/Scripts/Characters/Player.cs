@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 
+
 public class Player : MonoBehaviour
 {
 
@@ -47,7 +48,7 @@ public class Player : MonoBehaviour
         transform.position += transform.rotation * (_currentVelocity * Time.deltaTime * _moveDir);
         CheckGround();
         _rb = GetComponent<Rigidbody2D>();
-        _depth = GetComponent<BoxCollider2D>().bounds.size.y;
+        _depth = gameObject.GetComponentInChildren<BoxCollider2D>().bounds.size.y;
     }
 
     public void FixedUpdate()
@@ -108,4 +109,14 @@ public class Player : MonoBehaviour
         Debug.DrawRay(transform.position, Vector2.down * _depth, Color.red, 0, false);
     }
     
+
+    public void Death(GameObject killer)
+    {
+        if (killer != null)
+        {
+            Debug.Log("die");
+            GameManager.instance.LoseLife();
+            
+        }
+    }
 }

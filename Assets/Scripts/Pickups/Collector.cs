@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collectible : MonoBehaviour
+public class Collector : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        Collectible pickup = collision.GetComponent<Collectible>();
+
+        if(pickup != null)
         {
-            Destroy(gameObject);
+            pickup.Collect();
         }
     }
 }
