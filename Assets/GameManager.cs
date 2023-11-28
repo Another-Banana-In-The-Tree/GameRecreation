@@ -1,0 +1,37 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class GameManager : MonoBehaviour
+{
+    public static GameManager instance;
+   [SerializeField] private static int lives = 3;
+
+    private void Awake()
+    {
+        {
+            if (instance == null)
+            {
+                instance = new GameManager();
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+
+            
+        }
+
+        Debug.Log(lives);
+    }
+
+    public void LoseLife()
+    {
+        lives--;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+   
+}
+

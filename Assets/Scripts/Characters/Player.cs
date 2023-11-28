@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Tilemaps;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class Player : MonoBehaviour
 {
@@ -115,8 +115,8 @@ public class Player : MonoBehaviour
         if (killer != null)
         {
             Debug.Log("die");
-
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            GameManager.instance.LoseLife();
+            
         }
     }
 }
