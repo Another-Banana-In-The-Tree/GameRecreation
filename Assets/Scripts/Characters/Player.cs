@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 
+
 public class Player : MonoBehaviour
 {
 
@@ -18,11 +19,9 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private Vector2 Movement; //checks movement for animations
     SpriteRenderer sprite;
-    
-    //Vars
-    private float _currentVelocity = 0;
-    [SerializeField ]private float jumpTime;
-    
+
+    private float _currentVelocity= 0;
+
     //Vars for checking grounded
     private bool _isGrounded;
     private Rigidbody2D _rb;
@@ -49,17 +48,18 @@ public class Player : MonoBehaviour
         transform.position += transform.rotation * (_currentVelocity * Time.deltaTime * _moveDir);
         CheckGround();
         _rb = GetComponent<Rigidbody2D>();
-        _depth = GetComponent<BoxCollider2D>().bounds.size.y;
+        _depth = gameObject.GetComponentInChildren<BoxCollider2D>().bounds.size.y;
     }
 
     public void FixedUpdate()
     {
+
         Movement = speed * Time.deltaTime * _moveDir;
-        if (_currentVelocity < speed && Movement.x != 0 )
+        if (_currentVelocity < speed && Movement.x != 0)
         {
             _currentVelocity += 0.4f;
         }
-        if (_currentVelocity > 0 && Movement.x == 0 )
+        if (_currentVelocity > 0 && Movement.x == 0)
         {
             _currentVelocity -= 0.4f;
         }
@@ -92,13 +92,12 @@ public class Player : MonoBehaviour
         _moveDir = newDirection;
     }
     
-    public void Jump(float JumpHeld) {
+    public void Jump() {
         
         if(_isGrounded)
         {
             Debug.Log("Jump called");
-            
-            _rb.velocity = new Vector2(_rb.velocity.x, (jumpForce*JumpHeld + 1));
+            _rb.velocity = new Vector2(_rb.velocity.x, jumpForce);
         }
 
     }
@@ -110,4 +109,14 @@ public class Player : MonoBehaviour
         Debug.DrawRay(transform.position, Vector2.down * _depth, Color.red, 0, false);
     }
     
+
+    public void Death(GameObject killer)
+    {
+        if (killer != null)
+        {
+            Debug.Log("die");
+            GameManager.instance.LoseLife();
+            
+        }
+    }
 }

@@ -4,12 +4,34 @@ using UnityEngine;
 
 public class HeadStomp : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private Rigidbody2D player;
+    private Vector2 bounceForce = new Vector2(0, 15);
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
-        if(collision.gameObject.tag == "WeakPoint")
+        
+        if (collision.gameObject.tag == "PlayerFoot")
         {
-            Destroy(collision.gameObject);
+            if (gameObject.tag == "WeakPoint")
+            {
+                Enemy enemy = transform.root.gameObject.GetComponent<Enemy>();
+                if (enemy != null)
+                {
+                    enemy.Die();
+                }
+            }
+            if(gameObject.tag == "Barrel")
+            {
+
+                Barrel  barrel = transform.root.gameObject.GetComponent<Barrel>();
+                if (barrel != null)
+                {
+                    barrel.Stomped();
+                }
+            }
+            player = collision.gameObject.transform.root.gameObject.GetComponent<Rigidbody2D>();
+
+            player.AddForce(bounceForce, ForceMode2D.Impulse);
         }
     }
 }
