@@ -15,9 +15,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Jump",
+                    "name": "Attack",
                     "type": "Button",
-                    "id": "684157ea-65b7-432d-beee-9d0407dc5b67",
+                    "id": "97a5a23c-5621-4ab3-b0c6-26a4bbd4ef14",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -60,7 +60,35 @@
                 },
                 {
                     "name": "",
-                    "id": "fd5a85ce-b382-4a10-b1b2-791348156d6d",
+                    "id": "b4587a23-db31-41f2-9d6a-2b86f61cc9fb",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Jumping",
+            "id": "801c9119-1424-4b0c-8b90-391bed24509b",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "PassThrough",
+                    "id": "45fefab7-67f5-4b8f-9de0-ea7cb0056394",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "91e31e51-80f3-44dc-a756-8e04d09f8403",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",

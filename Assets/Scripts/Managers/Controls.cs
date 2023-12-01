@@ -37,9 +37,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Jump"",
+                    ""name"": ""Attack"",
                     ""type"": ""Button"",
-                    ""id"": ""684157ea-65b7-432d-beee-9d0407dc5b67"",
+                    ""id"": ""97a5a23c-5621-4ab3-b0c6-26a4bbd4ef14"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -82,7 +82,35 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""fd5a85ce-b382-4a10-b1b2-791348156d6d"",
+                    ""id"": ""b4587a23-db31-41f2-9d6a-2b86f61cc9fb"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Jumping"",
+            ""id"": ""801c9119-1424-4b0c-8b90-391bed24509b"",
+            ""actions"": [
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""45fefab7-67f5-4b8f-9de0-ea7cb0056394"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""91e31e51-80f3-44dc-a756-8e04d09f8403"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -99,7 +127,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         // Game
         m_Game = asset.FindActionMap("Game", throwIfNotFound: true);
         m_Game_Movement = m_Game.FindAction("Movement", throwIfNotFound: true);
-        m_Game_Jump = m_Game.FindAction("Jump", throwIfNotFound: true);
+        m_Game_Attack = m_Game.FindAction("Attack", throwIfNotFound: true);
+        // Jumping
+        m_Jumping = asset.FindActionMap("Jumping", throwIfNotFound: true);
+        m_Jumping_Jump = m_Jumping.FindAction("Jump", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -162,13 +193,13 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Game;
     private List<IGameActions> m_GameActionsCallbackInterfaces = new List<IGameActions>();
     private readonly InputAction m_Game_Movement;
-    private readonly InputAction m_Game_Jump;
+    private readonly InputAction m_Game_Attack;
     public struct GameActions
     {
         private @Controls m_Wrapper;
         public GameActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Game_Movement;
-        public InputAction @Jump => m_Wrapper.m_Game_Jump;
+        public InputAction @Attack => m_Wrapper.m_Game_Attack;
         public InputActionMap Get() { return m_Wrapper.m_Game; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -181,9 +212,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Movement.started += instance.OnMovement;
             @Movement.performed += instance.OnMovement;
             @Movement.canceled += instance.OnMovement;
-            @Jump.started += instance.OnJump;
-            @Jump.performed += instance.OnJump;
-            @Jump.canceled += instance.OnJump;
+            @Attack.started += instance.OnAttack;
+            @Attack.performed += instance.OnAttack;
+            @Attack.canceled += instance.OnAttack;
         }
 
         private void UnregisterCallbacks(IGameActions instance)
@@ -191,9 +222,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Movement.started -= instance.OnMovement;
             @Movement.performed -= instance.OnMovement;
             @Movement.canceled -= instance.OnMovement;
-            @Jump.started -= instance.OnJump;
-            @Jump.performed -= instance.OnJump;
-            @Jump.canceled -= instance.OnJump;
+            @Attack.started -= instance.OnAttack;
+            @Attack.performed -= instance.OnAttack;
+            @Attack.canceled -= instance.OnAttack;
         }
 
         public void RemoveCallbacks(IGameActions instance)
@@ -211,9 +242,59 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         }
     }
     public GameActions @Game => new GameActions(this);
+
+    // Jumping
+    private readonly InputActionMap m_Jumping;
+    private List<IJumpingActions> m_JumpingActionsCallbackInterfaces = new List<IJumpingActions>();
+    private readonly InputAction m_Jumping_Jump;
+    public struct JumpingActions
+    {
+        private @Controls m_Wrapper;
+        public JumpingActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Jump => m_Wrapper.m_Jumping_Jump;
+        public InputActionMap Get() { return m_Wrapper.m_Jumping; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(JumpingActions set) { return set.Get(); }
+        public void AddCallbacks(IJumpingActions instance)
+        {
+            if (instance == null || m_Wrapper.m_JumpingActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_JumpingActionsCallbackInterfaces.Add(instance);
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
+        }
+
+        private void UnregisterCallbacks(IJumpingActions instance)
+        {
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
+        }
+
+        public void RemoveCallbacks(IJumpingActions instance)
+        {
+            if (m_Wrapper.m_JumpingActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IJumpingActions instance)
+        {
+            foreach (var item in m_Wrapper.m_JumpingActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_JumpingActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public JumpingActions @Jumping => new JumpingActions(this);
     public interface IGameActions
     {
         void OnMovement(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
+    }
+    public interface IJumpingActions
+    {
         void OnJump(InputAction.CallbackContext context);
     }
 }
