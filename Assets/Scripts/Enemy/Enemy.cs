@@ -16,7 +16,9 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected float waitTime;
     [SerializeField] protected bool patrolling = true;
 
-   // private Rigidbody2D rb;
+    public Animator animator;
+
+    // private Rigidbody2D rb;
 
     private WaitForSeconds waitCooldown;
     // [SerializeField]protected Camera cam;
@@ -29,7 +31,7 @@ public abstract class Enemy : MonoBehaviour
         Debug.Log("test");
     }*/
 
-   
+  
 
     public virtual void Init()
     {
@@ -46,11 +48,13 @@ public abstract class Enemy : MonoBehaviour
 
     public virtual IEnumerator SetTarget(Vector3 position)
     {
-       // Debug.Log("set target wait");
+        // Debug.Log("set target wait");
         settingTarget = true;
+        animator.SetBool("Stopped", true);
         yield return waitCooldown;
        // Debug.Log("ended wait");
         settingTarget = false;
+        animator.SetBool("Stopped", false);
         target = position;
         FaceTowards();
     }
@@ -70,8 +74,8 @@ public abstract class Enemy : MonoBehaviour
         if (!settingTarget)
         {
 
-            
 
+        
             previousPosition = transform.position;
 
             if (transform.position.x != target.x)
@@ -102,6 +106,7 @@ public abstract class Enemy : MonoBehaviour
 
             }
         }
+     
     }
 
     public virtual void Spawned(Transform[] wayPointSet) 
