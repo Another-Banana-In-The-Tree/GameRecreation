@@ -51,6 +51,17 @@ public class Coconut : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             Debug.Log("HitPlayer");
+
+            collision.gameObject.GetComponent<Player>().Death(this.gameObject);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("HitPlayer");
+
+            collision.gameObject.GetComponent<Player>().Death(this.gameObject);
         }
     }
 
