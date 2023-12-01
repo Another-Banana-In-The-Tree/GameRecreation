@@ -40,11 +40,16 @@ public class Player : MonoBehaviour
     private bool HasFireFlower;
     private bool HasStarPower;
 
-    private void Start()
+    private void Awake()
     {
         InputManager.Init(this);
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        _rb = GetComponent<Rigidbody2D>();
+        _depth = gameObject.GetComponentInChildren<BoxCollider2D>().bounds.size.y;
+    }
+    private void Start()
+    {
         HasStarPower = false;
         HasFireFlower = false;
     }
@@ -54,8 +59,6 @@ public class Player : MonoBehaviour
         animator.playbackTime = Time.deltaTime;
         transform.position += transform.rotation * (_currentVelocity * Time.deltaTime * _moveDir);
         CheckGround();
-        _rb = GetComponent<Rigidbody2D>();
-        _depth = gameObject.GetComponentInChildren<BoxCollider2D>().bounds.size.y;
     }
 
     public void FixedUpdate()
