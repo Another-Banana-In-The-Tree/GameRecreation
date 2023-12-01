@@ -27,9 +27,17 @@ public static class InputManager
             if (_controls.Jumping.Jump.WasReleasedThisFrame())
             {
             **/
-                myPlayer.Jump(/**jumpTimer**/1);
+                myPlayer.Jump(/**jumpTimer**/);
             //}
             
+        };
+
+
+        _controls.Game.Attack.performed += ctx =>
+        {
+            myPlayer.AttackStart();
+
+
         };
 
         _controls.Enable();

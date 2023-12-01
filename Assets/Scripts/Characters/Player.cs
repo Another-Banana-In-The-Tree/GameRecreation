@@ -34,12 +34,19 @@ public class Player : MonoBehaviour
     private Vector2 _moveDir;
     private Rigidbody2D _rigidbody2D;
     private Collider2D _collider2D;
+    
+    //Vars for FireFlower, Powerstar and Invinciblity
+    [SerializeField] private GameObject fireBall;
+    private bool HasFireFlower;
+    private bool HasStarPower;
 
     private void Start()
     {
         InputManager.Init(this);
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        HasStarPower = false;
+        HasFireFlower = false;
     }
 
     private void Update()
@@ -119,4 +126,39 @@ public class Player : MonoBehaviour
             
         }
     }
+
+    /**
+     * This is the only part of my code I feel is necessary to comment. The powerups will call this method whenever they
+     * are collected, and from here mario will correctly act and choose the powerup from the index they have provided
+     * Index of 0: Fire Flower; Mario tosses out fireballs when in this state
+     * Index of 1: Power Star; Mario becomes invincible and can kill enemies as if he jumped on them
+     * Case Default: Do nothing; Should never be called because that's not how this works
+     */
+    public void PowerUpObtained(int PowerUpIndex)
+    {
+        switch (PowerUpIndex)
+        {
+            case 0:
+                HasFireFlower = true;
+                break;
+            case 1:
+                HasStarPower = true;
+                break;
+        }
+    }
+
+    public void AttackStart()
+    {
+        if (HasFireFlower)
+        {
+            GameObject ourFireBall = Instantiate(fireBall, transform.position, Quaternion.identity);
+            Rigidbody2D ourFireRB = ourFireBall.GetComponent<Rigidbody2D>();
+            
+            ourFireRB.AddForce( 7 * _moveDir , ForceMode2D.Impulse);
+            Destroy(ourFireBall,1.7f);
+
+        }
+    }
+    
+    
 }
