@@ -153,8 +153,21 @@ public class Player : MonoBehaviour
         {
             GameObject ourFireBall = Instantiate(fireBall, transform.position, Quaternion.identity);
             Rigidbody2D ourFireRB = ourFireBall.GetComponent<Rigidbody2D>();
-            
-            ourFireRB.AddForce( 7 * _moveDir , ForceMode2D.Impulse);
+
+            int fixedMovement = 4;
+            Vector2 fix = new Vector2(1, 0);
+
+            if(_moveDir.x < 0)
+            {
+                fixedMovement = 5;
+                fix = new Vector2(-1, 0);
+            } else if (sprite.flipX)
+            {
+                fixedMovement = 5;
+                fix = new Vector2(-1, 0);
+            }
+
+            ourFireRB.AddForce( fixedMovement * (_moveDir + fix) , ForceMode2D.Impulse);
             Destroy(ourFireBall,1.7f);
 
         }
