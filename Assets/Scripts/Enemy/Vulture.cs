@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Vulture : MonoBehaviour
+public class Vulture : Enemy
 {
     [SerializeField] private Rigidbody2D coconut;
     [SerializeField] private SpriteRenderer vultureRenderer;
@@ -10,27 +10,31 @@ public class Vulture : MonoBehaviour
     [SerializeField] private float timeBetweenRounds;
     [SerializeField] private Transform[] throwPoints = new Transform[3];
     private Vector2 dir;
-    private int speed = 2;
+   // private int speed = 2;
     private int throwCount = 0;
 
+    private void Awake()
+    {
+        dir = Vector2.left;
+    }
 
     private void Start()
     {
-        dir = Vector2.left;
+        
         Throw();
         
     }
 
     private void Throw()
     {
-        Debug.Log("throw");
+       // Debug.Log("throw");
        Rigidbody2D  thrownCoconut = Instantiate(coconut,throwPoints[throwCount].position, throwPoints[throwCount].rotation);
         thrownCoconut.gameObject.GetComponent<Coconut>().SetDirection(dir * speed, throwCount);
         thrownCoconut.AddForce((dir + Vector2.up*3) * speed, ForceMode2D.Impulse);
         throwCount++;
         if(throwCount <= 2)
         {
-            Debug.Log("call corutine");
+           // Debug.Log("call corutine");
             StartCoroutine("ChangeDirection");
         }
         else
@@ -41,7 +45,7 @@ public class Vulture : MonoBehaviour
 
     public IEnumerator ChangeDirection()
     {
-        Debug.Log("corutine start");
+        //Debug.Log("corutine start");
         switch (throwCount)
         {
             case 0:
@@ -54,9 +58,9 @@ public class Vulture : MonoBehaviour
                 dir = Vector2.right;
                 break;
         }
-
+        //Debug.Log(dir);
         yield return new WaitForSeconds(coolDown);
-        Debug.Log("corutine end");
+       // Debug.Log("corutine end");
         Throw();
 
     }

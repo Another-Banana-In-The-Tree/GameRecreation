@@ -45,8 +45,14 @@ public class Player : MonoBehaviour
         InputManager.Init(this);
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        _rb = GetComponent<Rigidbody2D>();
+       _rb = gameObject.GetComponent<Rigidbody2D>();
+
+        if(_rb == null)
+        {
+            gameObject.GetComponent<Rigidbody2D>();
+        }
         _depth = gameObject.GetComponentInChildren<BoxCollider2D>().bounds.size.y;
+        Debug.Log(_rb);
     }
     private void Start()
     {
@@ -106,7 +112,7 @@ public class Player : MonoBehaviour
         
         if(_isGrounded)
         {
-            Debug.Log("Jump called");
+            //Debug.Log("Jump called");
             _rb.velocity = new Vector2(_rb.velocity.x, jumpForce);
         }
 
@@ -124,7 +130,7 @@ public class Player : MonoBehaviour
     {
         if (killer != null)
         {
-            Debug.Log("die");
+            //Debug.Log("die");
             GameManager.instance.LoseLife();
             
         }
