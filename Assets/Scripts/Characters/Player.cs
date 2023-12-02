@@ -40,6 +40,11 @@ public class Player : MonoBehaviour
     private bool HasFireFlower;
     private bool HasStarPower;
 
+    //Background switch
+    [SerializeField] private GameObject outsideBG;
+    [SerializeField] private GameObject caveBG;
+    private float cavePoint = -13;
+
     private void Awake()
     {
         InputManager.Init(this);
@@ -65,6 +70,17 @@ public class Player : MonoBehaviour
         animator.playbackTime = Time.deltaTime;
         transform.position += transform.rotation * (_currentVelocity * Time.deltaTime * _moveDir);
         CheckGround();
+
+        if (transform.position.y < cavePoint)
+        {
+            caveBG.SetActive(true);
+            outsideBG.SetActive(false);
+        }
+        if (transform.position.y >= cavePoint)
+        {
+            caveBG.SetActive(false);
+            outsideBG.SetActive(true);
+        }
     }
 
     public void FixedUpdate()
