@@ -8,6 +8,7 @@ public class HeadStomp : MonoBehaviour
     private Rigidbody2D player;
     private Vector2 bounceForce = new Vector2(0, 15);
    [SerializeField ] private Enemy enemy;
+    [SerializeField] Barrel barrel;
 
     private void Awake()
     {
@@ -38,10 +39,12 @@ public class HeadStomp : MonoBehaviour
                 }
                 if (gameObject.tag == "Barrel")
                 {
+                    Debug.Log("BARREL");
 
-                    Barrel barrel = transform.root.gameObject.GetComponent<Barrel>();
+                    //Barrel barrel = transform.root.gameObject.GetComponent<Barrel>();
                     if (barrel != null)
                     {
+                        Debug.Log("barrel not null");
                         barrel.Stomped();
                     }
                 }

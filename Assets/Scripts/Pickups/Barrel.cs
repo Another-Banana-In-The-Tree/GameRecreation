@@ -16,12 +16,12 @@ public class Barrel : MonoBehaviour
     public void Stomped()
     {
         print("kaboom");
-        
+        Instantiate(heldItem, spawn, transform.rotation);
         Destroy(gameObject);
     }
 
     private void OnDestroy()
     {
-        Instantiate(heldItem, spawn, transform.rotation);
+        
     }
 }

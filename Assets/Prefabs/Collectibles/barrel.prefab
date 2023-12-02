@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3863643524961257569}
   - component: {fileID: 6359194404853588388}
   - component: {fileID: 2785091466882351970}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barrel
   m_TagString: Barrel
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 5882369853421225382}
   - component: {fileID: 462865505734939490}
   - component: {fileID: 7097035907232009170}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: topCheck
   m_TagString: Barrel
   m_Icon: {fileID: 0}
@@ -232,9 +232,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.49}
+  m_Offset: {x: 0, y: 0.08}
   serializedVersion: 2
-  m_Radius: 0.29
+  m_Radius: 0.05
 --- !u!114 &7097035907232009170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,3 +248,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
+  barrel: {fileID: 6359194404853588388}
