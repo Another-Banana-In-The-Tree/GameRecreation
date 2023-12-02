@@ -119,6 +119,13 @@ public abstract class Enemy : MonoBehaviour
         Debug.Log("whaaa");
         Destroy(gameObject);
     }
-  
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.GetComponent<Player>().Death(gameObject);
+        }
+    }
+
 }

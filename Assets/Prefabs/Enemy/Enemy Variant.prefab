@@ -85,6 +85,22 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1674100642108656539, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2039132
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674100642108656539, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.25395924
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674100642108656539, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.014288671
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674100642108656539, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0015949607
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674100642108656539, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
       propertyPath: m_SpriteTilingProperty.drawMode
       value: 0
       objectReference: {fileID: 0}
@@ -104,6 +120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4167946420336332835, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 2189487550042965149}
     - target: {fileID: 4223878130434815867, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -146,7 +166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5990376124114678042, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
       propertyPath: m_Radius
-      value: 0.05
+      value: 0.046076182
       objectReference: {fileID: 0}
     - target: {fileID: 5990376124114678042, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
       propertyPath: m_Offset.x
@@ -154,7 +174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5990376124114678042, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
       propertyPath: m_Offset.y
-      value: 0.1
+      value: 0.0960762
       objectReference: {fileID: 0}
     - target: {fileID: 5990376124114678042, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
       propertyPath: m_IsTrigger
@@ -162,24 +182,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6739901026143338380, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
       propertyPath: m_Size.x
-      value: 0.2
+      value: 0.06935995
       objectReference: {fileID: 0}
     - target: {fileID: 6739901026143338380, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
       propertyPath: m_Size.y
-      value: 0.25
+      value: 0.06792869
       objectReference: {fileID: 0}
     - target: {fileID: 6739901026143338380, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.02
+      value: -0.008577585
+      objectReference: {fileID: 0}
+    - target: {fileID: 6739901026143338380, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.09103566
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6416645518209643784, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1793105761902838372, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4722622697858285377}
   m_SourcePrefab: {fileID: 100100000, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
+--- !u!114 &2189487550042965149 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5753641767863676484, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
+  m_PrefabInstance: {fileID: 5889465759875132121}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5285521543563192509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c22b529f6de75469904d4561b1a621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5285521543563192509 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1793105761902838372, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}

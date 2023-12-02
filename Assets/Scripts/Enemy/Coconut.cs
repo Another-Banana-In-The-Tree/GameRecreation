@@ -31,6 +31,8 @@ public class Coconut : MonoBehaviour
     {
         dir = direction;
         coconutNum = cocoNum;
+
+        Debug.Log(coconutNum);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
