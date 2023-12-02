@@ -53472,6 +53472,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06276db082d5012488596cdd86f3c93d, type: 3}
+--- !u!95 &2066461179 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5723631634182388920, guid: e4b7b1947a7b34445844a71143a7c61c, type: 3}
+  m_PrefabInstance: {fileID: 4512645155953752296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2067653041
 GameObject:
   m_ObjectHideFlags: 0
@@ -53846,13 +53851,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.17
       objectReference: {fileID: 0}
+    - target: {fileID: 4165371752234859160, guid: e4b7b1947a7b34445844a71143a7c61c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 205645287, guid: 41c4210064c8d784d8f0b4c1a3220d6d, type: 3}
+    - target: {fileID: 6617297573412382140, guid: e4b7b1947a7b34445844a71143a7c61c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.9309614
+      objectReference: {fileID: 0}
     - target: {fileID: 6617297573412382140, guid: e4b7b1947a7b34445844a71143a7c61c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.4964
+      value: 8.7
       objectReference: {fileID: 0}
     - target: {fileID: 6617297573412382140, guid: e4b7b1947a7b34445844a71143a7c61c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0411
+      value: -0.725
       objectReference: {fileID: 0}
     - target: {fileID: 6617297573412382140, guid: e4b7b1947a7b34445844a71143a7c61c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -53890,6 +53903,10 @@ PrefabInstance:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7317028314372515665, guid: e4b7b1947a7b34445844a71143a7c61c, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2066461179}
     - target: {fileID: 7317028314372515665, guid: e4b7b1947a7b34445844a71143a7c61c, type: 3}
       propertyPath: vultureRenderer
       value: 
