@@ -109,7 +109,7 @@ public class Player : MonoBehaviour
     }
     
     public void Jump() {
-        
+        if (_rb == null) return;
         if(_isGrounded)
         {
             //Debug.Log("Jump called");
