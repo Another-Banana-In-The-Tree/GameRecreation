@@ -39,6 +39,8 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject fireBall;
     private bool HasFireFlower;
     private bool HasStarPower;
+    private bool StartCountdown = false;
+    private float StarPowerRemaining = 6;
 
     private void Awake()
     {
@@ -65,6 +67,18 @@ public class Player : MonoBehaviour
         animator.playbackTime = Time.deltaTime;
         transform.position += transform.rotation * (_currentVelocity * Time.deltaTime * _moveDir);
         CheckGround();
+
+        //Star Power Calculations
+        if (StartCountdown)
+        {
+            StarPowerRemaining = -Time.deltaTime;
+            if (StarPowerRemaining < 0)
+            {
+                HasStarPower = false;
+                StartCountdown = false;
+                StarPowerRemaining = 6;
+            }
+        }
     }
 
     public void FixedUpdate()
@@ -128,11 +142,18 @@ public class Player : MonoBehaviour
 
     public void Death(GameObject killer)
     {
-        if (killer != null)
+        if (!HasStarPower)
         {
-            //Debug.Log("die");
-            GameManager.instance.LoseLife();
-            
+            if (killer != null)
+            {
+                //Debug.Log("die");
+                GameManager.instance.LoseLife();
+
+            }
+        }
+        else
+        {
+            Destroy(killer);
         }
     }
 
