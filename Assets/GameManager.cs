@@ -29,22 +29,11 @@ public class GameManager : MonoBehaviour
     public void LoseLife()
     {
         lives--;
-        if(lives <= 0)
-        {
-            GameOver();
-        }
+      
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    private void GameOver()
-    {
-
-    }
-    public void GameWin()
-    {
-        Debug.Log("congrats");
-    }
-
+  
    
 }
 
