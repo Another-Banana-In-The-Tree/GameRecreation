@@ -29,11 +29,15 @@ public class GameManager : MonoBehaviour
     public void LoseLife()
     {
         lives--;
-      
+        UiManager.instance.LivesText(lives);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-  
-   
+    public int GetCurrentLives()
+    {
+        return lives;
+    }
+
+
 }
 
