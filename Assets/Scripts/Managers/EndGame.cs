@@ -6,7 +6,7 @@ public class EndGame : MonoBehaviour, Collectible
 {
     public void Collect()
     {
-
+        GameManager.instance.GameWin();
 
 
     }
