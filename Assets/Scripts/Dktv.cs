@@ -34,7 +34,8 @@ public class Dktv : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        
+        FindObjectOfType<AudioManager>().Play("Theme");
+        FindObjectOfType<AudioManager>().Stop("PoshSong");
         videoPlayer.Pause();
        
     }
