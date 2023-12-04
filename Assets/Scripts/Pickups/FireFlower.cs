@@ -6,11 +6,21 @@ using UnityEngine;
 
 public class FireFlower : MonoBehaviour, Collectible
 {
-    [SerializeField] private Player theMario;
+    private Player theMario;
+
+    private void Awake()
+    {
+        theMario = GameObject.FindObjectOfType<Player>();
+        
+    }
+
     public void Collect()
     {
-        theMario.PowerUpObtained(0);
-        Destroy(this.gameObject);
+        if (theMario != null)
+        {
+            theMario.PowerUpObtained(0);
+            Destroy(this.gameObject);
+        }
     }
 
 }
