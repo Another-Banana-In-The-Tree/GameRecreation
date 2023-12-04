@@ -23,6 +23,9 @@ public class Dktv : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        FindObjectOfType<AudioManager>().Stop("Theme");
+        FindObjectOfType<AudioManager>().Stop("StarSong");
+        FindObjectOfType<AudioManager>().Play("PoshSong");
         if (other.transform.tag.Contains("Player"))
         {
             videoPlayer.Play();
