@@ -3629,11 +3629,11 @@ PrefabInstance:
     - target: {fileID: 2189487550042965149, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: wayPoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1776815386}
+      objectReference: {fileID: 9567561}
     - target: {fileID: 2189487550042965149, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: wayPoints.Array.data[1]
       value: 
-      objectReference: {fileID: 9567561}
+      objectReference: {fileID: 1776815386}
     - target: {fileID: 5285521543563192509, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_Name
       value: Enemy Variant (2)
@@ -3652,19 +3652,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3672,7 +3672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -3680,7 +3680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7720769690136829346, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_FlipX
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9609,11 +9609,11 @@ PrefabInstance:
     - target: {fileID: 2189487550042965149, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: wayPoints.Array.data[0]
       value: 
-      objectReference: {fileID: 628303713}
+      objectReference: {fileID: 158155161}
     - target: {fileID: 2189487550042965149, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: wayPoints.Array.data[1]
       value: 
-      objectReference: {fileID: 158155161}
+      objectReference: {fileID: 628303713}
     - target: {fileID: 5285521543563192509, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_Name
       value: Enemy Variant (3)
@@ -9632,19 +9632,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9652,7 +9652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -9660,7 +9660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7720769690136829346, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_FlipX
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13730,8 +13730,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   fireBall: {fileID: 0}
-  outsideBG: {fileID: 475687432}
-  caveBG: {fileID: 1507237663}
 --- !u!50 &1425975314
 Rigidbody2D:
   serializedVersion: 4
@@ -13902,11 +13900,11 @@ PrefabInstance:
     - target: {fileID: 2189487550042965149, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: wayPoints.Array.data[0]
       value: 
-      objectReference: {fileID: 564369257}
+      objectReference: {fileID: 186257157}
     - target: {fileID: 2189487550042965149, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: wayPoints.Array.data[1]
       value: 
-      objectReference: {fileID: 186257157}
+      objectReference: {fileID: 564369257}
     - target: {fileID: 5285521543563192509, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_Name
       value: Enemy Variant (6)
@@ -13925,19 +13923,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13945,7 +13943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -13953,7 +13951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7720769690136829346, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_FlipX
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14331,11 +14329,11 @@ PrefabInstance:
     - target: {fileID: 2189487550042965149, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: wayPoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1597046808}
+      objectReference: {fileID: 623061027}
     - target: {fileID: 2189487550042965149, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: wayPoints.Array.data[1]
       value: 
-      objectReference: {fileID: 623061027}
+      objectReference: {fileID: 1597046808}
     - target: {fileID: 5285521543563192509, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_Name
       value: Enemy Variant
@@ -14354,19 +14352,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14374,7 +14372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -14382,7 +14380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7720769690136829346, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_FlipX
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19447,11 +19445,11 @@ PrefabInstance:
     - target: {fileID: 2189487550042965149, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: wayPoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1195082405}
+      objectReference: {fileID: 2078660547}
     - target: {fileID: 2189487550042965149, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: wayPoints.Array.data[1]
       value: 
-      objectReference: {fileID: 2078660547}
+      objectReference: {fileID: 1195082405}
     - target: {fileID: 5285521543563192509, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_Name
       value: Enemy Variant (1)
@@ -19470,19 +19468,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -19490,7 +19488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 6248419143718036981, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -19498,7 +19496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7720769690136829346, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_FlipX
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
