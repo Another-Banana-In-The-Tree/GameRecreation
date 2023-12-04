@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject fireBall;
     [SerializeField] private float starPowerLength;
     private bool HasFireFlower;
-    private bool HasStarPower;
+    public bool HasStarPower;
     private bool StartCountdown = false;
     private float StarPowerRemaining = 6;
 
@@ -127,6 +127,7 @@ public class Player : MonoBehaviour
         if (_rb == null) return;
         if(_isGrounded)
         {
+            FindObjectOfType<AudioManager>().Play("Jump");
             //Debug.Log("Jump called");
             _rb.velocity = new Vector2(_rb.velocity.x, jumpForce);
         }
@@ -142,7 +143,11 @@ public class Player : MonoBehaviour
 
     public void Death(GameObject killer)
     {
-        if (killer.tag == "DeathBox") GameManager.instance.LoseLife();
+        if (killer.tag == "DeathBox")
+        {
+            FindObjectOfType<AudioManager>().Play("Pipe");
+            GameManager.instance.LoseLife();
+        }
         if (HasStarPower)
         {
             if (killer.gameObject.GetComponent<DeathBarrier>() == null) Destroy(killer);
@@ -153,6 +158,7 @@ public class Player : MonoBehaviour
             if (killer != null)
             {
                 //Debug.Log("die");
+                FindObjectOfType<AudioManager>().Play("Pipe");
                 GameManager.instance.LoseLife();
             }
         }
@@ -171,6 +177,7 @@ public class Player : MonoBehaviour
         {
             case 0:
                 HasFireFlower = true;
+                FindObjectOfType<AudioManager>().Play("PowerUp");
                 animator.SetBool("isFire", true);
                 break;
             case 1:
@@ -184,6 +191,7 @@ public class Player : MonoBehaviour
     {
         if (HasFireFlower)
         {
+            FindObjectOfType<AudioManager>().Play("Fireball");
             GameObject ourFireBall = Instantiate(fireBall, transform.position, Quaternion.identity);
             Rigidbody2D ourFireRB = ourFireBall.GetComponent<Rigidbody2D>();
 
@@ -209,8 +217,12 @@ public class Player : MonoBehaviour
     private IEnumerator StarCountdownRoutine()
     {
         animator.SetBool("isStar", true);
+        FindObjectOfType<AudioManager>().Stop("Theme");
+        FindObjectOfType<AudioManager>().Play("StarSong");
         yield return new WaitForSeconds(starPowerLength);
         HasStarPower = false;
+        FindObjectOfType<AudioManager>().Stop("StarSong");
+        FindObjectOfType<AudioManager>().Play("Theme");
         animator.SetBool("isStar", false);
     }
 }

@@ -34,6 +34,7 @@ public class HeadStomp : MonoBehaviour
                     if (enemy != null)
                     {
                         Debug.Log("stomptriggered");
+                        FindObjectOfType<AudioManager>().Play("Kill");
                         enemy.Die();
                     }
                 }
@@ -45,6 +46,7 @@ public class HeadStomp : MonoBehaviour
                     if (barrel != null)
                     {
                         Debug.Log("barrel not null");
+                        FindObjectOfType<AudioManager>().Play("Barrel");
                         barrel.Stomped();
                     }
                 }

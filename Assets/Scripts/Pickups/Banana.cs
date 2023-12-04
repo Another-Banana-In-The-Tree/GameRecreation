@@ -10,6 +10,7 @@ public class Banana : MonoBehaviour, Collectible
     public void Collect()
     {
         ScoreManager.instance.AddScore();
+        FindObjectOfType<AudioManager>().Play("Coin");
         Debug.Log("boing!");
         Destroy(gameObject);
         
