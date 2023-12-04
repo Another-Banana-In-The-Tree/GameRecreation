@@ -40,9 +40,19 @@ public static class InputManager
 
         };
 
-        _controls.Enable();
+        
 
 
+    }
+    public static void EnableGame()
+    {
+        _controls.Game.Enable();
+        _controls.Jumping.Enable();
+    }
+    public static void DisableGame()
+    {
+        _controls.Game.Disable();
+        _controls.Jumping.Disable();
     }
     
     

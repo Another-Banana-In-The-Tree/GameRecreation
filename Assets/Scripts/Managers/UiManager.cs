@@ -8,12 +8,14 @@ public class UiManager : MonoBehaviour
     public static UiManager instance;
     [SerializeField] private Text _text;
     [SerializeField] private Text _nanaText;
-
+    [SerializeField] private GameObject startMenu;
+    [SerializeField] private GameObject winMenu;
     private void Start()
     {
         _text.text = "Lives x " + GameManager.instance.GetCurrentLives().ToString();
 
         _nanaText.text = "Score x 0";
+        winMenu.SetActive(false);
     }
 
     private void Awake()
@@ -54,5 +56,26 @@ public class UiManager : MonoBehaviour
 
     }
 
+    public void StartGame()
+    {
+       startMenu.SetActive(false);
+    GameManager.instance.StartGame();
+    }
 
+
+    public void OpenStartmenu()
+    {
+        startMenu.SetActive(true);
+    }
+
+     public void WinGame()
+    {
+        winMenu.SetActive(true);
+    }
+
+    public void Restart()
+    {
+        GameManager.instance.RestartGame();
+    }
+    
 }
