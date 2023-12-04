@@ -39,11 +39,8 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject fireBall;
     private bool HasFireFlower;
     private bool HasStarPower;
-
-    //Background switch
-    [SerializeField] private GameObject outsideBG;
-    [SerializeField] private GameObject caveBG;
-    private float cavePoint = -13;
+    private bool StartCountdown = false;
+    private float StarPowerRemaining = 6;
 
     private void Awake()
     {
@@ -71,15 +68,16 @@ public class Player : MonoBehaviour
         transform.position += transform.rotation * (_currentVelocity * Time.deltaTime * _moveDir);
         CheckGround();
 
-        if (transform.position.y < cavePoint)
+        //Star Power Calculations
+        if (StartCountdown)
         {
-            caveBG.SetActive(true);
-            outsideBG.SetActive(false);
-        }
-        if (transform.position.y >= cavePoint)
-        {
-            caveBG.SetActive(false);
-            outsideBG.SetActive(true);
+            StarPowerRemaining = -Time.deltaTime;
+            if (StarPowerRemaining < 0)
+            {
+                HasStarPower = false;
+                StartCountdown = false;
+                StarPowerRemaining = 6;
+            }
         }
     }
 
@@ -144,11 +142,18 @@ public class Player : MonoBehaviour
 
     public void Death(GameObject killer)
     {
-        if (killer != null)
+        if (!HasStarPower)
         {
-            //Debug.Log("die");
-            GameManager.instance.LoseLife();
-            
+            if (killer != null)
+            {
+                //Debug.Log("die");
+                GameManager.instance.LoseLife();
+
+            }
+        }
+        else
+        {
+            Destroy(killer);
         }
     }
 
