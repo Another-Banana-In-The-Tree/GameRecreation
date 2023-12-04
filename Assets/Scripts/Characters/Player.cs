@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
 
     //Vars for checking grounded
     private bool _isGrounded;
-    private Rigidbody2D _rb;
+    public Rigidbody2D _rb;
     private float _depth;
     
     [Header("Ground Layer for Collision")]
