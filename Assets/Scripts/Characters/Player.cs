@@ -212,6 +212,10 @@ public class Player : MonoBehaviour
             Destroy(ourFireBall,1.7f);
 
         }
+        else
+        {
+            Debug.Log("No Powers?");
+        }
     }
     
     private IEnumerator StarCountdownRoutine()

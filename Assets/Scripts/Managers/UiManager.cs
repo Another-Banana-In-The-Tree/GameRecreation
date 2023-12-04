@@ -12,9 +12,9 @@ public class UiManager : MonoBehaviour
     [SerializeField] private GameObject winMenu;
     private void Start()
     {
-        _text.text = "Lives x " + GameManager.instance.GetCurrentLives().ToString();
+        _text.text =  GameManager.instance.GetCurrentLives().ToString();
 
-        _nanaText.text = "Score x 0";
+        _nanaText.text = "X 0";
         winMenu.SetActive(false);
     }
 
@@ -47,12 +47,12 @@ public class UiManager : MonoBehaviour
 
     public void LivesText(int lives)
     {
-        _text.text = "Lives x " + lives.ToString();
+        _text.text = lives.ToString();
     }
 
     public void NanasText(int score)
     {
-        _nanaText.text = "Score x " + score.ToString();
+        _nanaText.text = $"X " + score.ToString();
 
     }
 
