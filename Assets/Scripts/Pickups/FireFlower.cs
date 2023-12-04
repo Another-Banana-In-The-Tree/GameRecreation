@@ -10,8 +10,8 @@ public class FireFlower : MonoBehaviour, Collectible
 
     private void Awake()
     {
-        theMario = GameObject.FindObjectOfType<Player>();
-        
+        //FindObjectOfType<AudioManager>().Play("Fireball");
+        theMario = GameObject.FindObjectOfType<Player>();   
     }
 
     public void Collect()

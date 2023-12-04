@@ -24,6 +24,7 @@ public class FireBall : MonoBehaviour
 
         if (other.gameObject.tag == "Enemy")
         {
+            FindObjectOfType<AudioManager>().Play("Kill");
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
@@ -37,6 +38,7 @@ public class FireBall : MonoBehaviour
 
         if (other.gameObject.tag == "Enemy")
         {
+            FindObjectOfType<AudioManager>().Play("Kill");
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

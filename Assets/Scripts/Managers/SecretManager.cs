@@ -18,6 +18,10 @@ public class SecretManager : MonoBehaviour
     //When the player collides with the collider, teleport them to the new location
     private void OnTriggerEnter2D(Collider2D other)
     {
-        player.transform.position = teleportLocation.position;
+        if (other.gameObject.tag != "Fireball")
+        {
+            FindObjectOfType<AudioManager>().Play("Pipe");
+            player.transform.position = teleportLocation.position;
+        }
     }
 }

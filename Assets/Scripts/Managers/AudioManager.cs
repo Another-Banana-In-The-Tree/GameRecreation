@@ -39,5 +39,16 @@ public class AudioManager : MonoBehaviour
         //play sound
         s.source.Play();
     }
+    public void Stop(string name)
+    {
+        //find the name of the sound if nothing comes back return null.
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            return;
+        }
+        //play sound
+        s.source.Stop();
+    }
 }
 //FindObjectOfType<AudioManager>().Play("Jump");
