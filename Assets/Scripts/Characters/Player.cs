@@ -34,7 +34,11 @@ public class Player : MonoBehaviour
     private Vector2 _moveDir;
     private Rigidbody2D _rigidbody2D;
     private Collider2D _collider2D;
-    
+
+    //Cave Parallax
+    [SerializeField] private GameObject CaveBG;
+    [SerializeField] private GameObject OutsideBG;
+
     //Vars for FireFlower, Powerstar and Invinciblity
     [SerializeField] private GameObject fireBall;
     [SerializeField] private float starPowerLength;
@@ -80,6 +84,21 @@ public class Player : MonoBehaviour
                 StarPowerRemaining = 6;
             }
         }
+
+        //cave parallax
+
+        if (transform.position.y < -13 && transform.position.x > 0)
+        {
+            CaveBG.SetActive(true);
+            OutsideBG.SetActive(false);
+        }
+        if (transform.position.y >= -13)
+        {
+            CaveBG.SetActive(false);
+            OutsideBG.SetActive(true);
+        }
+
+
     }
 
     public void FixedUpdate()
