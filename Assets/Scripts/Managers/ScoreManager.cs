@@ -34,6 +34,10 @@ public class ScoreManager : MonoBehaviour
     {
         score++;
         UiManager.instance.NanasText(score);
+        if(score >= 100)
+        {
+            GameManager.instance.AddLives();
+        }
     }
 
     
