@@ -136,25 +136,25 @@ public class Player : MonoBehaviour
     private void CheckGround()
     {
         _isGrounded = Physics2D.Raycast(transform.position, Vector2.down, _depth, groundLayers);
-        
         Debug.DrawRay(transform.position, Vector2.down * _depth, Color.red, 0, false);
     }
     
 
     public void Death(GameObject killer)
     {
-        if (!HasStarPower)
+        if (killer.tag == "DeathBox") GameManager.instance.LoseLife();
+        if (HasStarPower)
+        {
+            if (killer.gameObject.GetComponent<DeathBarrier>() == null) Destroy(killer);
+            return;
+        }
+        else
         {
             if (killer != null)
             {
                 //Debug.Log("die");
                 GameManager.instance.LoseLife();
-
             }
-        }
-        else
-        {
-            Destroy(killer);
         }
     }
 
@@ -171,6 +171,7 @@ public class Player : MonoBehaviour
         {
             case 0:
                 HasFireFlower = true;
+                animator.SetBool("isFire", true);
                 break;
             case 1:
                 StartCoroutine("StarCountdownRoutine");

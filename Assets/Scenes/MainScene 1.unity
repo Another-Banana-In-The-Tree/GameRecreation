@@ -179,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 18874741}
   - component: {fileID: 18874742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 33369838}
   - component: {fileID: 33369839}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 2 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -807,39 +807,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8588821435023611689, guid: 06276db082d5012488596cdd86f3c93d, type: 3}
   m_PrefabInstance: {fileID: 1464457209}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &86820920
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 86820921}
-  m_Layer: 0
-  m_Name: Waypoints5 (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &86820921
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 86820920}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.19, y: -1.9599998, z: 0}
-  m_LocalScale: {x: 0.8522928, y: 1.1871076, z: 0.32825}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1346595098}
-  - {fileID: 186257157}
-  m_Father: {fileID: 1802496786}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &88032623
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,7 +817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 88032624}
   - component: {fileID: 88032625}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -934,7 +901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 94995622}
   - component: {fileID: 94995623}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1281,7 +1248,7 @@ GameObject:
   - component: {fileID: 116534808}
   m_Layer: 0
   m_Name: DeathBarrier (1)
-  m_TagString: Untagged
+  m_TagString: DeathBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1457,7 +1424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 152651971}
   - component: {fileID: 152651972}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1541,7 +1508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 156966616}
   - component: {fileID: 156966617}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1656,7 +1623,7 @@ GameObject:
   m_Component:
   - component: {fileID: 170661231}
   - component: {fileID: 170661232}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1805,37 +1772,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8588821435023611689, guid: 06276db082d5012488596cdd86f3c93d, type: 3}
   m_PrefabInstance: {fileID: 1040420349}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &186257156
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 186257157}
-  m_Layer: 0
-  m_Name: Waypoint2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &186257157
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186257156}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.33, y: 1.01, z: -0.26833537}
-  m_LocalScale: {x: 1.1733055, y: 0.84238356, z: 3.0464587}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 86820921}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &191525828
 GameObject:
   m_ObjectHideFlags: 0
@@ -2344,7 +2280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 235281480}
   - component: {fileID: 235281481}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2428,7 +2364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 235478336}
   - component: {fileID: 235478337}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2699,7 +2635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 258072209}
   - component: {fileID: 258072210}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2783,7 +2719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 268388124}
   - component: {fileID: 268388125}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Sky (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3151,7 +3087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 312586714}
   - component: {fileID: 312586715}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 2 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3268,7 +3204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 324903869}
   - component: {fileID: 324903870}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3402,7 +3338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 334352336}
   - component: {fileID: 334352337}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: composite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3544,7 +3480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 356520615}
   - component: {fileID: 356520616}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3707,7 +3643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 364700034}
   - component: {fileID: 364700035}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagmites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3921,7 +3857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 387972587}
   - component: {fileID: 387972588}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagmites (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4005,7 +3941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 399122928}
   - component: {fileID: 399122929}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4146,7 +4082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 405237774}
   - component: {fileID: 405237775}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagmites (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4268,7 +4204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 426165502}
   - component: {fileID: 426165503}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4417,7 +4353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 452714861}
   - component: {fileID: 452714862}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagmites (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4589,7 +4525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 475687433}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OutsideBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4625,7 +4561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 477996990}
   - component: {fileID: 477996991}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4709,7 +4645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491796376}
   - component: {fileID: 491796377}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4980,7 +4916,7 @@ GameObject:
   m_Component:
   - component: {fileID: 507858756}
   - component: {fileID: 507858757}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Sky (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5121,7 +5057,7 @@ GameObject:
   m_Component:
   - component: {fileID: 513924148}
   - component: {fileID: 513924149}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Background Cave (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5364,7 +5300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 529430306}
   - component: {fileID: 529430307}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5510,7 +5446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 539964601}
   - component: {fileID: 539964602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5609,7 +5545,7 @@ Transform:
   m_GameObject: {fileID: 564369256}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.53, y: 1.16, z: -0.26833537}
+  m_LocalPosition: {x: -4.64, y: 0.49, z: -0.26833537}
   m_LocalScale: {x: 1.1733055, y: 0.84238356, z: 3.0464587}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5625,7 +5561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 575971078}
   - component: {fileID: 575971079}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagmites (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5812,7 +5748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 585118076}
   - component: {fileID: 585118077}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Sky (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5896,7 +5832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 586808058}
   - component: {fileID: 586808059}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6276,7 +6212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 639613641}
   - component: {fileID: 639613642}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Sky (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6618,7 +6554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 676591831}
   - component: {fileID: 676591832}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagtites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6702,7 +6638,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687987318}
   - component: {fileID: 687987319}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6796,7 +6732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 703839617}
   - component: {fileID: 703839618}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7035,7 +6971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 740438457}
   - component: {fileID: 740438458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Background Cave (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7124,7 +7060,7 @@ GameObject:
   m_Component:
   - component: {fileID: 744552993}
   - component: {fileID: 744552994}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7278,7 +7214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 776109814}
   - component: {fileID: 776109815}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7372,7 +7308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 783836497}
   - component: {fileID: 783836498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Sky (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7487,7 +7423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 804534705}
   - component: {fileID: 804534706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7571,7 +7507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 810182261}
   - component: {fileID: 810182262}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7730,7 +7666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 856935439}
   - component: {fileID: 856935440}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8082,7 +8018,7 @@ GameObject:
   m_Component:
   - component: {fileID: 880392174}
   - component: {fileID: 880392175}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8146,7 +8082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 887838582}
   - component: {fileID: 887838583}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8206,7 +8142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 896522042}
   - component: {fileID: 896522043}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8274,7 +8210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 903608455}
   - component: {fileID: 903608456}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8363,7 +8299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 909243145}
   - component: {fileID: 909243146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Background Cave (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8512,7 +8448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 919393673}
   - component: {fileID: 919393674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8601,7 +8537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 944386368}
   - component: {fileID: 944386369}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8685,7 +8621,7 @@ GameObject:
   m_Component:
   - component: {fileID: 948467109}
   - component: {fileID: 948467110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Background Cave (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8774,7 +8710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 955994969}
   - component: {fileID: 955994970}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8858,7 +8794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 959139833}
   - component: {fileID: 959139834}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8942,7 +8878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 959441742}
   - component: {fileID: 959441743}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Sky (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9031,7 +8967,7 @@ GameObject:
   m_Component:
   - component: {fileID: 979771490}
   - component: {fileID: 979771491}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9172,7 +9108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1014417681}
   - component: {fileID: 1014417682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Sky (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9321,7 +9257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1030343303}
   - component: {fileID: 1030343304}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10086,7 +10022,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1131262180}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Backgrounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10260,7 +10196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1172963064}
   - component: {fileID: 1172963065}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagmites (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10349,7 +10285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1183653288}
   - component: {fileID: 1183653289}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10433,7 +10369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1191094603}
   - component: {fileID: 1191094604}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10548,7 +10484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1198027212}
   - component: {fileID: 1198027213}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 2 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11096,7 +11032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1234734640}
   - component: {fileID: 1234734641}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagtites (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11182,7 +11118,7 @@ GameObject:
   - component: {fileID: 1239011291}
   - component: {fileID: 1239011290}
   - component: {fileID: 1239011289}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -11292,7 +11228,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.75
+  orthographic size: 3.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -11323,7 +11259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1244931589}
   - component: {fileID: 1244931590}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11464,7 +11400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1250130340}
   - component: {fileID: 1250130341}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagmites (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11548,7 +11484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1254304531}
   - component: {fileID: 1254304532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagmites (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11767,7 +11703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1265927701}
   - component: {fileID: 1265927702}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11856,7 +11792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1280135472}
   - component: {fileID: 1280135473}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11940,7 +11876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1296389117}
   - component: {fileID: 1296389118}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagtites (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12088,7 +12024,7 @@ GameObject:
   - component: {fileID: 1309812671}
   m_Layer: 3
   m_Name: Ground Collider (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12181,7 +12117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1318311301}
   - component: {fileID: 1318311302}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12265,7 +12201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1321466556}
   - component: {fileID: 1321466557}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12349,7 +12285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1335835769}
   - component: {fileID: 1335835770}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12433,7 +12369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1339504814}
   - component: {fileID: 1339504815}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12517,7 +12453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1341492264}
   - component: {fileID: 1341492265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 2 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12675,37 +12611,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 304035520}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 7.408}
---- !u!1 &1346595097
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1346595098}
-  m_Layer: 0
-  m_Name: Waypoint1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1346595098
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346595097}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.04, y: 1.16, z: -0.26833537}
-  m_LocalScale: {x: 1.1733055, y: 0.84238356, z: 3.0464587}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 86820921}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1353002675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12793,7 +12698,7 @@ PrefabInstance:
     - target: {fileID: 6359194404853588388, guid: 3342dfa9436ae1c489b2b47075768ed8, type: 3}
       propertyPath: heldItem
       value: 
-      objectReference: {fileID: 5641379220418402284, guid: 83d3e7dc4d2377a4db60adff8ddfd6a6, type: 3}
+      objectReference: {fileID: 7042717934063901438, guid: 344d0865413e3c34da0d2ae48b1e83aa, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12907,7 +12812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1362265462}
   - component: {fileID: 1362265463}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13186,7 +13091,7 @@ GameObject:
   - component: {fileID: 1397660524}
   m_Layer: 0
   m_Name: DeathBarrier
-  m_TagString: Untagged
+  m_TagString: DeathBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13278,7 +13183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1403905680}
   - component: {fileID: 1403905681}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Sky (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13424,7 +13329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1416538334}
   - component: {fileID: 1416538335}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13508,7 +13413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1422846684}
   - component: {fileID: 1422846685}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13597,7 +13502,7 @@ GameObject:
   - component: {fileID: 1425975313}
   - component: {fileID: 1425975312}
   - component: {fileID: 1425975318}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -13643,8 +13548,8 @@ MonoBehaviour:
   Movement: {x: 0, y: 0}
   groundLayers:
     serializedVersion: 2
-    m_Bits: 8
-  fireBall: {fileID: 0}
+    m_Bits: 520
+  fireBall: {fileID: 7380722721183212057, guid: 2037e45a13066c44290f6aede71bd92b, type: 3}
   starPowerLength: 1000
 --- !u!50 &1425975314
 Rigidbody2D:
@@ -13816,11 +13721,11 @@ PrefabInstance:
     - target: {fileID: 2189487550042965149, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: wayPoints.Array.data[0]
       value: 
-      objectReference: {fileID: 186257157}
+      objectReference: {fileID: 564369257}
     - target: {fileID: 2189487550042965149, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: wayPoints.Array.data[1]
       value: 
-      objectReference: {fileID: 564369257}
+      objectReference: {fileID: 2048578817}
     - target: {fileID: 5285521543563192509, guid: b992b7c26bbd02942af3847e56653e14, type: 3}
       propertyPath: m_Name
       value: Enemy Variant (6)
@@ -13965,7 +13870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1443356435}
   - component: {fileID: 1443356436}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagtites (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14318,7 +14223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1481842160}
   - component: {fileID: 1481842161}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14402,7 +14307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1483325784}
   - component: {fileID: 1483325785}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Sky (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14486,7 +14391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1504897941}
   - component: {fileID: 1504897942}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagtites (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14570,7 +14475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1505425435}
   - component: {fileID: 1505425436}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Background Cave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14653,7 +14558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1507237664}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CaveBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14887,7 +14792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1537565312}
   - component: {fileID: 1537565313}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 2 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15121,7 +15026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1542805536}
   - component: {fileID: 1542805537}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15205,7 +15110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1555753779}
   - component: {fileID: 1555753780}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15289,7 +15194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1566576241}
   - component: {fileID: 1566576242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagtites (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15435,7 +15340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1594785229}
   - component: {fileID: 1594785230}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15677,7 +15582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1614263157}
   - component: {fileID: 1614263158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16066,7 +15971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1617248896}
   - component: {fileID: 1617248897}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16215,7 +16120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1629035795}
   - component: {fileID: 1629035796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16309,7 +16214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1638818284}
   - component: {fileID: 1638818285}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16429,7 +16334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1659339105}
   - component: {fileID: 1659339106}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 2 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16740,7 +16645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1674165749}
   - component: {fileID: 1674165750}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Background Cave (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16824,7 +16729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1674827991}
   - component: {fileID: 1674827992}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Background Cave (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16908,7 +16813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1678023578}
   - component: {fileID: 1678023579}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16992,7 +16897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1685744321}
   - component: {fileID: 1685744322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17076,7 +16981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1710874399}
   - component: {fileID: 1710874400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Background Cave (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17160,7 +17065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1729993296}
   - component: {fileID: 1729993297}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Sky (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17338,7 +17243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1747176259}
   - component: {fileID: 1747176260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17504,7 +17409,7 @@ GameObject:
   - component: {fileID: 1758102892}
   m_Layer: 3
   m_Name: Ground Collider (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17594,7 +17499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1763134840}
   - component: {fileID: 1763134841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Background Cave (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17678,7 +17583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1765685014}
   - component: {fileID: 1765685015}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Sky (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17827,7 +17732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1774689632}
   - component: {fileID: 1774689633}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagmites (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17942,7 +17847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1778945558}
   - component: {fileID: 1778945559}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18026,7 +17931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1779705851}
   - component: {fileID: 1779705852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18148,7 +18053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1795062172}
   - component: {fileID: 1795062173}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18264,7 +18169,6 @@ Transform:
   - {fileID: 191525829}
   - {fileID: 416742514}
   - {fileID: 1784883685}
-  - {fileID: 86820921}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1807070904
@@ -18277,7 +18181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1807070905}
   - component: {fileID: 1807070906}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18361,7 +18265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1808133590}
   - component: {fileID: 1808133591}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18445,7 +18349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1816018850}
   - component: {fileID: 1816018851}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 2 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18856,7 +18760,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1826584294}
   - component: {fileID: 1826584295}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18916,7 +18820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1835551264}
   - component: {fileID: 1835551265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagtites (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19070,7 +18974,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1843340840}
   - component: {fileID: 1843340841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19159,7 +19063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1855471284}
   - component: {fileID: 1855471285}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19271,7 +19175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1873236876}
   - component: {fileID: 1873236877}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19699,7 +19603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1891362767}
   - component: {fileID: 1891362768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19840,7 +19744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1893960689}
   - component: {fileID: 1893960690}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 2 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19941,7 +19845,7 @@ Transform:
   m_GameObject: {fileID: 1894927503}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.67, y: -0.89, z: 0}
+  m_LocalPosition: {x: 21, y: -1.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20015,7 +19919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1914089904}
   - component: {fileID: 1914089906}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerFoot
   m_TagString: PlayerFoot
   m_Icon: {fileID: 0}
@@ -20092,7 +19996,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1915568127}
   - component: {fileID: 1915568128}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20181,7 +20085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1933380763}
   - component: {fileID: 1933380764}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagtites (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20395,7 +20299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1942606927}
   - component: {fileID: 1942606928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Sky (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20820,7 +20724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2010454202}
   - component: {fileID: 2010454203}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20904,7 +20808,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2011893452}
   - component: {fileID: 2011893453}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Sky (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56116,7 +56020,7 @@ PrefabInstance:
     - target: {fileID: 2785091466882351970, guid: 3342dfa9436ae1c489b2b47075768ed8, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: d4b51f6ed1cfa5743859048b5107160e, type: 2}
+      objectReference: {fileID: 9100000, guid: a1b7b38834c79b74f9d1fbc5f1ffaf9e, type: 2}
     - target: {fileID: 3863643524961257569, guid: 3342dfa9436ae1c489b2b47075768ed8, type: 3}
       propertyPath: m_Size.x
       value: 0.15
@@ -56192,7 +56096,7 @@ PrefabInstance:
     - target: {fileID: 6359194404853588388, guid: 3342dfa9436ae1c489b2b47075768ed8, type: 3}
       propertyPath: heldItem
       value: 
-      objectReference: {fileID: 7042717934063901438, guid: 344d0865413e3c34da0d2ae48b1e83aa, type: 3}
+      objectReference: {fileID: 5641379220418402284, guid: 83d3e7dc4d2377a4db60adff8ddfd6a6, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -57675,7 +57579,7 @@ Transform:
   m_GameObject: {fileID: 2048578816}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.77, y: 1.01, z: -0.26833537}
+  m_LocalPosition: {x: 2.28, y: 1.01, z: -0.26833537}
   m_LocalScale: {x: 1.1733055, y: 0.84238356, z: 3.0464587}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -57730,7 +57634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2060756444}
   - component: {fileID: 2060756445}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57877,7 +57781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2067653042}
   - component: {fileID: 2067653043}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57997,7 +57901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2084356428}
   - component: {fileID: 2084356429}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK trees (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58081,7 +57985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2087033271}
   - component: {fileID: 2087033272}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stalagtites (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58235,7 +58139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2119662602}
   - component: {fileID: 2119662603}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DK Bush 3 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58388,6 +58292,10 @@ PrefabInstance:
     - target: {fileID: 8304551076925582533, guid: e4b7b1947a7b34445844a71143a7c61c, type: 3}
       propertyPath: m_Name
       value: EnemyVulture
+      objectReference: {fileID: 0}
+    - target: {fileID: 8304551076925582533, guid: e4b7b1947a7b34445844a71143a7c61c, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1482060212229122571, guid: e4b7b1947a7b34445844a71143a7c61c, type: 3}

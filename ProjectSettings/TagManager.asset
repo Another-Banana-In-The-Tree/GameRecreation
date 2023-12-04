@@ -10,6 +10,7 @@ TagManager:
   - WeakPoint
   - Coconut
   - Barrel
+  - DeathBox
   layers:
   - Default
   - TransparentFX
