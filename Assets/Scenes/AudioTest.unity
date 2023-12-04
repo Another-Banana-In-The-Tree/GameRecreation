@@ -285,7 +285,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 0937da172fd1ea047b92b757b9082b34, type: 3}
     volume: 0.5
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: PowerUp
     clip: {fileID: 8300000, guid: b4fec8f610109be4bbef1d3601b218fa, type: 3}
