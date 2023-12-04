@@ -166,7 +166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5990376124114678042, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
       propertyPath: m_Radius
-      value: 0.046076182
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 5990376124114678042, guid: 69347e06964f1cb448cc41313cf8723e, type: 3}
       propertyPath: m_Offset.x
