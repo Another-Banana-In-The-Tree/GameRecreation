@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     
     //Vars for FireFlower, Powerstar and Invinciblity
     [SerializeField] private GameObject fireBall;
+    [SerializeField] private float starPowerLength;
     private bool HasFireFlower;
     private bool HasStarPower;
     private bool StartCountdown = false;
@@ -172,6 +173,7 @@ public class Player : MonoBehaviour
                 HasFireFlower = true;
                 break;
             case 1:
+                StartCoroutine("StarCountdownRoutine");
                 HasStarPower = true;
                 break;
         }
@@ -203,5 +205,11 @@ public class Player : MonoBehaviour
         }
     }
     
-    
+    private IEnumerator StarCountdownRoutine()
+    {
+        animator.SetBool("isStar", true);
+        yield return new WaitForSeconds(starPowerLength);
+        HasStarPower = false;
+        animator.SetBool("isStar", false);
+    }
 }
