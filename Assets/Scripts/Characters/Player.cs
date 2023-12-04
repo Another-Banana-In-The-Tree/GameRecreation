@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
     //Vars for FireFlower, Powerstar and Invinciblity
     [SerializeField] private GameObject fireBall;
     [SerializeField] private float starPowerLength;
-    private bool HasFireFlower;
+    public bool HasFireFlower;
     public bool HasStarPower;
     private bool StartCountdown = false;
     private float StarPowerRemaining = 6;
