@@ -47,9 +47,12 @@ public class Player : MonoBehaviour
     private bool StartCountdown = false;
     private float StarPowerRemaining = 6;
 
+    public GameManager gm;
+
     private void Awake()
     {
-        InputManager.Init(this);
+        gm = FindObjectOfType<GameManager>();
+        InputManager.Init(this, gm);
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
        _rb = gameObject.GetComponent<Rigidbody2D>();

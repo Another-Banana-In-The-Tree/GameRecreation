@@ -7,7 +7,7 @@ public static class InputManager
 {
     private static Controls _controls;
     private static float jumpTimer = 0;
-    public static void Init(Player myPlayer)
+    public static void Init(Player myPlayer, GameManager gm)
     {
         _controls = new Controls();
 
@@ -39,8 +39,15 @@ public static class InputManager
 
 
         };
+        _controls.Game.Start.performed += ctx =>
+        {
+            Debug.Log("Start!!!!!");
+            gm.StartGame();
 
-        
+
+        };
+
+
 
 
     }
