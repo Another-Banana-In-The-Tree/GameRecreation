@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     
     //Vars for FireFlower, Powerstar and Invinciblity
     [SerializeField] private GameObject fireBall;
+    [SerializeField] private float starPowerLength;
     private bool HasFireFlower;
     private bool HasStarPower;
     private bool StartCountdown = false;
@@ -135,25 +136,25 @@ public class Player : MonoBehaviour
     private void CheckGround()
     {
         _isGrounded = Physics2D.Raycast(transform.position, Vector2.down, _depth, groundLayers);
-        
         Debug.DrawRay(transform.position, Vector2.down * _depth, Color.red, 0, false);
     }
     
 
     public void Death(GameObject killer)
     {
-        if (!HasStarPower)
+        if (killer.tag == "DeathBox") GameManager.instance.LoseLife();
+        if (HasStarPower)
+        {
+            if (killer.gameObject.GetComponent<DeathBarrier>() == null) Destroy(killer);
+            return;
+        }
+        else
         {
             if (killer != null)
             {
                 //Debug.Log("die");
                 GameManager.instance.LoseLife();
-
             }
-        }
-        else
-        {
-            Destroy(killer);
         }
     }
 
@@ -170,8 +171,10 @@ public class Player : MonoBehaviour
         {
             case 0:
                 HasFireFlower = true;
+                animator.SetBool("isFire", true);
                 break;
             case 1:
+                StartCoroutine("StarCountdownRoutine");
                 HasStarPower = true;
                 break;
         }
@@ -203,5 +206,11 @@ public class Player : MonoBehaviour
         }
     }
     
-    
+    private IEnumerator StarCountdownRoutine()
+    {
+        animator.SetBool("isStar", true);
+        yield return new WaitForSeconds(starPowerLength);
+        HasStarPower = false;
+        animator.SetBool("isStar", false);
+    }
 }
